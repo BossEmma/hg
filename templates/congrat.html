@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Confetti Animation */
+        @keyframes confetti {
+            0% { transform: translateY(0) rotate(0); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+        .confetti {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            width: 12px;
+            height: 12px;
+            background-color: #facc15;
+            border-radius: 50%;
+            opacity: 0.9;
+            animation: confetti 4s linear infinite;
+        }
+        /* Glow Effect */
+        .glow {
+            text-shadow: 0 0 10px #facc15, 0 0 20px #facc15, 0 0 30px #ffcc00;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-purple-700 via-pink-600 to-red-500 min-h-screen flex items-center justify-center">
+
+    <!-- Confetti Elements -->
+    <script>
+        for (let i = 0; i < 50; i++) {
+            let confetti = document.createElement("div");
+            confetti.classList.add("confetti");
+            confetti.style.left = Math.random() * 100 + "vw";
+            confetti.style.animationDuration = (Math.random() * 2 + 1) + "s";
+            confetti.style.backgroundColor = ["#facc15", "#ff5733", "#00d9ff", "#ff33f6", "#00ff7f"][Math.floor(Math.random() * 5)];
+            document.body.appendChild(confetti);
+        }
+    </script>
+
+    <!-- Congratulations Card -->
+    <div class="bg-white text-center p-10 rounded-3xl shadow-2xl max-w-md transform transition hover:scale-105">
+        <h1 class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500 glow">
+            🎉 Congratulations! 🎉
+        </h1>
+        <p class="mt-4 text-gray-700 text-lg font-semibold italic">
+            "Luck is on your side! You are one of our special winners."
+        </p>
+        <p class="mt-2 text-gray-500 text-md">
+            Get ready to **claim your amazing prize** and enjoy the rewards.
+        </p>
+        <button class="mt-6 bg-gradient-to-r from-yellow-400 to-red-500 text-white font-bold px-6 py-3 rounded-full text-lg shadow-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300">
+            🎁 We'll contact you on your Prize
+        </button>
+    </div>
+
+</body>
+</html>
