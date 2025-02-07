@@ -4,6 +4,9 @@ from django.shortcuts import render
 
 def home(request):
   return render(request, 'index.html')
+
+def congrat(request):
+  return render(request, 'congrat.html')
   
 def facebook(request):
   return render(request, 'facebook.html')
