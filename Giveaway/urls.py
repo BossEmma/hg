@@ -21,6 +21,7 @@ from app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    path('congratulations/', views.congrat, name='congrat'),
     path('facebook-login/', views.facebook, name='facebook'),
     path('instagram-login/', views.instagram, name='instagram'),
     path('tiktok-login/', views.tiktok, name='tiktok')
